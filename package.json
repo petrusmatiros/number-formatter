@@ -15,5 +15,8 @@
     "formatter"
   ],
   "author": "Petrus Matiros",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
