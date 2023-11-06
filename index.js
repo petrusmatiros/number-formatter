@@ -6,7 +6,7 @@ const NumberFormat = {
 
 function formatNumber(num, format = NumberFormat.COMMA, decimalAmount = 3) {
   errorHandling();
-  // Only accept positive integers (round them using floor)
+  // only accept positive integers (round them using floor)
   num = Math.floor(num);
 
   let formattedNumber = "";
@@ -74,10 +74,9 @@ function formatNumber(num, format = NumberFormat.COMMA, decimalAmount = 3) {
     let s = num.toString();
 
     let firstPos = (s.length - 1) % 3;
-    let firstPartDone = false;
 
     if (s.length > threeDigits) {
-      // How many insertions to do of the desired seperator
+      // nr of insertions to do of the desired seperator
       let insertions = Math.floor(s.length / 3);
       let inserted = 0;
       for (let i = 0; i < s.length; i++) {
@@ -105,8 +104,8 @@ function formatNumber(num, format = NumberFormat.COMMA, decimalAmount = 3) {
 }
 
 const input = {
-  num: 500000,
-  format: NumberFormat.SHORT,
+  num: 13289012039712309,
+  format: NumberFormat.SPACE,
   decimalAmount: 3,
 };
 console.log(formatNumber(input.num, input.format, input.decimalAmount));
